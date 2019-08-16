@@ -14,7 +14,6 @@ require_once (__DIR__ . '/components/Db.php');
 
 // 3. DB CONNECTION
 
-
 // 4. CALLING ROUTER
 $router = new Router();
 $router->run();

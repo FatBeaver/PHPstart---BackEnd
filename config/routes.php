@@ -1,10 +1,10 @@
 <?php 
 
 return [
-    'news/([a-z]+)/([0-9]+)' => 'news/view/$1/$2',
+    'product/([0-9]+)' => 'product/view/$1',
 
-    'news' => 'news/index',
+    'catalog' => 'catalog/index',
+    'catalog/([0-9]+)' => 'catalog/category/$1',
 
-
-    //'products' => 'products/list',
+    '' => 'site/index',
 ];

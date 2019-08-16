@@ -23,7 +23,7 @@ class Router
             {   
                 // 2.2 Получение внутреннего пути из внешнего согласно правилу regExp
                 $internalRoute = preg_replace("`$uriPattern$`", $path, $uri);
-
+              
                 // 2.3 Определение контроллера, экшена и параметров для обработки запроса
                 $segmentsRoute = explode('/', $internalRoute);
              
