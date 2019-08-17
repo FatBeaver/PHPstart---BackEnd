@@ -498,7 +498,9 @@ ul.sub-menu {
 .single-widget ul li a i {
   margin-right: 18px;
 }
-
+.registration_form {
+  margin-bottom: 170px;
+}
 .single-widget ul li a:hover{
 	background:none;
 	color:#FE980F;

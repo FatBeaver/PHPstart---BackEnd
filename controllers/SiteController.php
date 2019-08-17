@@ -7,7 +7,7 @@ class SiteController
     public function actionIndex()
     {      
         $categories = Category::getCategoriesList();
-        $latestProduct = Product::getLatestProducts();
+        $latestProduct = Product::getLatestProducts(12);
 
         require_once __DIR__ . '/../views/site/index.php';
         return true;

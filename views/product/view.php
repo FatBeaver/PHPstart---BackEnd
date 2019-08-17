@@ -12,7 +12,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a href="/catalog/<?= $categoryItem['id'];  ?>">
+                                    <a href="/category/<?= $categoryItem['id'];  ?>">
                                         <?= $categoryItem['name']; ?>
                                     </a>
                                 </h4>

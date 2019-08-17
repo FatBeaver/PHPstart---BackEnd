@@ -8,12 +8,10 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // 2. INCLUDING FILES
+define('ROOT', __DIR__);  
 
-require_once (__DIR__ . '/components/Router.php');
-require_once (__DIR__ . '/components/Db.php');
+require_once (__DIR__ . '/components/Autoload.php');
 
-// 3. DB CONNECTION
-
-// 4. CALLING ROUTER
+// 3. CALLING ROUTER
 $router = new Router();
 $router->run();

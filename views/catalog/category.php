@@ -12,7 +12,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a href="/catalog/<?= $categoryItem['id'];?>"
+                                    <a href="/category/<?= $categoryItem['id'];?>"
                                     class="<?php if ($categoryId == $categoryItem['id'])  echo 'active'?>">
                                         <?= $categoryItem['name']; ?>
                                     </a>
@@ -49,11 +49,12 @@
                                 <?php endif; ?>
                             </div>
                         </div>
+                        
                     </div>
                 <?php endforeach; ?>
 
             </div><!--features_items-->
-
+            <?php echo $pagination->get(); ?>
         </div>
     </div>
 </div>
