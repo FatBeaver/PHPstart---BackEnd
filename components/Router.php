@@ -43,7 +43,6 @@ class Router
                 }
 
                 $controllerObject = new $controllerName; // Cоздание экземпляра контроллера по собранному имени
-                
           
                 $result = call_user_func_array([$controllerObject, $actionName], $parameters);
                 
