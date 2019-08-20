@@ -93,4 +93,48 @@ class Product
         return $row['count'];
     }
 
+
+    public static function getProductsById($IDsArray)
+    {
+        $products = [];
+
+        $db = Db::getConnection();
+
+        $IDsString = implode(',', $IDsArray);
+
+        $sql = "SELECT * FROM product WHERE status = 1 AND id IN ($IDsString)";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['code'] = $row['code'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $i++;
+        }
+
+        return $products;
+    }
+
+    public static function getProductsIsRecomended()
+    {
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM product WHERE status = 1 AND is_recommended = 1";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        $i = 0;
+        while($row = $result->fetch()) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['code'] = $row['code'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $i++;
+        }
+
+        return $products;
+    }
 }

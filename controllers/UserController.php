@@ -78,9 +78,10 @@ class UserController
 
     public function actionLogout()
     {
-        session_start();
-        unset($_SESSION['user']);
+        unset($_SESSION['user'], $_SESSION['products']);
         header('Location: /');
+
+        return true;
     }
 
 }

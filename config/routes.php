@@ -1,7 +1,7 @@
 <?php 
 
 return [
-    //Товары
+    //Товар
     'product/([0-9]+)' => 'product/view/$1',
     //Каталог
     'catalog' => 'catalog/index',
@@ -15,6 +15,14 @@ return [
     'user/register' => 'user/register',
     'cabinet/edit' => 'cabinet/edit',
     'cabinet' => 'cabinet/index',
+    //Email
+    'contacts' => 'site/contact',
+    //Корзина товаров
+    'cart/add/([0-9]+)' => 'cart/add/$1',
+    'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1',
+    'cart' => 'cart/index',
+    'cart/checkout' => 'cart/checkout',
+    'cart/delete/([0-9]+)' => 'cart/delete/$1',
     //Главная страница
     '' => 'site/index',
 ];

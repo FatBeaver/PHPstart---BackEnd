@@ -120,4 +120,13 @@ class User
 
         return $result->execute();
     }
+
+    public static function checkUserPhoneNumber($userPhone)
+    {   
+        $pattern = '/([0-9]{5,15})/';
+        if (preg_match($pattern, $userPhone)) {
+            return true;
+        }
+        return false;
+    }
 }
