@@ -9,9 +9,6 @@ class SiteController
         $categories = Category::getCategoriesList();
         $latestProduct = Product::getLatestProducts(12);
         $recomendedProducts = Product::getProductsIsRecomended();    
-        echo "<pre>";
-        print_r($recomendedProducts);
-        echo "</pre>";
        
 
         require_once __DIR__ . '/../views/site/index.php';

@@ -23,6 +23,25 @@ return [
     'cart' => 'cart/index',
     'cart/checkout' => 'cart/checkout',
     'cart/delete/([0-9]+)' => 'cart/delete/$1',
+    
+    //Страница администратора
+    'admin' => 'admin/index',
+    //Управление товарами
+    'admin/product/create' => 'adminProduct/create',
+    'admin/product/update' => 'adminProduct/update/$1',
+    'admin/product/delete' => 'adminProduct/delete/$1',
+    'admin/product' => 'adminProduct/index',
+    //Управление категориями
+    'admin/category/create' => 'adminCategory/create',
+    'admin/category/update/([0-9]+)' => 'adminCategory/update/$1',
+    'admin/category/create/([0-9]+)' => 'adminCategory/delete/$1',
+    'admin/category' => 'adminCategory/index',
+    //Управление заказами
+    'admin/order/update/([0-9]+)' => 'adminOrder/update/$1', 
+    'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',
+    'admin/order/view' => 'AdminOrder/view/$1',
+    'admin/order' => 'adminOrder/index',
+
     //Главная страница
     '' => 'site/index',
 ];

@@ -137,4 +137,22 @@ class Product
 
         return $products;
     }
+
+    public static function getProductsList()
+    {
+        $db = Db::getConnection();
+
+        $result = $db->query("SELECT id, name, price, code FROM product ORDER BY id ASC");
+        $productsList = [];
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $productsList[$i]['id'] = $row['id'];
+            $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['code'] = $row['code'];
+            $i++;
+        }
+
+        return $productsList;
+    }
 }
