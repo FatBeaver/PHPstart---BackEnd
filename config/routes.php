@@ -28,8 +28,8 @@ return [
     'admin' => 'admin/index',
     //Управление товарами
     'admin/product/create' => 'adminProduct/create',
-    'admin/product/update' => 'adminProduct/update/$1',
-    'admin/product/delete' => 'adminProduct/delete/$1',
+    'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',
+    'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
     'admin/product' => 'adminProduct/index',
     //Управление категориями
     'admin/category/create' => 'adminCategory/create',
@@ -39,7 +39,7 @@ return [
     //Управление заказами
     'admin/order/update/([0-9]+)' => 'adminOrder/update/$1', 
     'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',
-    'admin/order/view' => 'AdminOrder/view/$1',
+    'admin/order/view/([0-9]+)' => 'AdminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
 
     //Главная страница

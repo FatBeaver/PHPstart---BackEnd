@@ -1,7 +1,7 @@
 <div class="page-buffer"></div>
 </div>
 
-<footer id="footer" class="page-footer"><!--Footer-->
+<footer id="footer_admin" class="page-footer"><!--Footer-->
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
